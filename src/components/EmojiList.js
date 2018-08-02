@@ -5,23 +5,23 @@ import getVisibleEmoji from '../selectors'
 
 class EmojiList extends Component {
     state = {
-        allEmoji: this.props.allEmoji
+        allEmoji: getVisibleEmoji(Object.entries(this.props.allEmoji), {text: ''}),
+        visibleEmoji: Object.entries(this.props.allEmoji)
     }
     componentWillReceiveProps = (nextProps) => {
         this.setState({
-            allEmoji: getVisibleEmoji(this.state.allEmoji, {text: nextProps.filterText})
+            visibleEmoji: getVisibleEmoji(this.state.allEmoji, {text: nextProps.filterText})
         })
     }
     render() {
         return (
             <div className="emoji_list">
                 {
-                    Object.entries(this.state.allEmoji).map(emoji => (
-                        // <Emoji
-                        //     key={emoji[0]}
-                        //     emojiData={emoji}
-                        // />
-                        console.log(emoji)
+                    this.state.visibleEmoji.map(emoji => (
+                        <Emoji
+                            key={emoji[0]}
+                            emojiData={emoji}
+                        />
                     ))
                 }
             </div>
