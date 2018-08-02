@@ -10,22 +10,22 @@ const emoji = (props) => {
 
         switch (skin_tone) {
             case 'light-skin-tone':
-                    char = skinTone(char, 1)
+                char = skinTone(char, skinTone.WHITE)
                 break;
             case 'medium-light-skin-tone': 
-                    char = skinTone(char, 2)
+                char = skinTone(char, skinTone.CREAM_WHITE)
                 break;
             case 'medium-skin-tone': 
-                    char = skinTone(char, 3)
+                char = skinTone(char, skinTone.LIGHT_BROWN)
                 break;
             case 'medium-dark-skin-tone': 
-                    char = skinTone(char, 4)
+                char = skinTone(char, skinTone.BROWN)
                 break;
             case 'dark-skin-tone': 
-                    char = skinTone(char, 5)
+                char = skinTone(char, skinTone.DARK_BROWN)
                 break;
             default:
-                    char = skinTone(char, 0)
+                char = skinTone(char, skinTone.NONE)
                 break;
         }
     
