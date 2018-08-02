@@ -1,4 +1,4 @@
-import emoji from '../emoji/emoji.main.json'
+import emoji from '../emoji/emoji.json'
 import { FILTER_BY_TEXT, FILTER_BY_CATEGORY } from '../actions';
 import { combineReducers } from 'redux';
 
