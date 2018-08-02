@@ -1,16 +1,14 @@
 import React from 'react'
 
-// key={emoji[1].code_points.base}
-// char={String.fromCodePoint(parseInt(emoji[1].code_points.base, 16))}
-// name={emoji[1].name}
-// code = { emoji[1].code_points.base } 
-
-
 const emoji = (props) => {
     let emojiData = props.emojiData[1],
-        char = String.fromCodePoint(parseInt(emojiData.code_points.base, 16))
+        char = String.fromCodePoint(parseInt(props.emojiData[0], 16))
+
     return (
-        <span>
+        <span 
+            data-info={props.emojiData[0]}
+            data-name={emojiData.name}
+        >
             {char}
         </span>
     )
