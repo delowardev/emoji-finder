@@ -1,0 +1,10 @@
+header{
+    background: #282828;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.logo_img img {
+    height: 30px;
+    display: block;
+}

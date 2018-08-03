@@ -1,0 +1,19 @@
+.search_form {
+    overflow: hidden;
+}
+
+.search_form .input_wrap{
+    float: right;
+    width: 400px;
+}
+
+.search_form .input_wrap input{
+    background: #fff;
+    height: 36px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-indent: 15px;
+    border-radius: 5px;
+}
