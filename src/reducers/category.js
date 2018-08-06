@@ -9,15 +9,3 @@ export default (state = categories, action) => {
             return state;
     }
 }
-
-
-// import store from '../store'
-// const emoji = Object.entries(store.getState().emojiReducer),
-//     categories = []
-
-// emoji.map(item => {
-//     const category = item[1].category
-//     if (!categories.includes(category)) {
-//         categories.push(category)
-//     }
-// })

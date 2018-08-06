@@ -34,7 +34,8 @@ class Category extends Component {
 
     render() {
         return (
-            <div>
+            <div className="category_list">
+                <h5>Category</h5>
                 <ul>
                     {
                         this.state.categories.map(category => (
@@ -48,7 +49,7 @@ class Category extends Component {
                                         category === this.state.category_filter ? 'active' : ''
                                     }
                                 >
-                                    {category}
+                                    {category} <span>230</span>
                                 </button>
                             </li>
                         ))

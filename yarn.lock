@@ -6131,12 +6131,6 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-skin-tone@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/skin-tone/-/skin-tone-1.0.0.tgz#d4ba3e8e5e92760e4d1d3b603d772805c6cb256f"
-  dependencies:
-    unicode-emoji-modifier-base "^1.0.0"
-
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -6692,10 +6686,6 @@ uglifyjs-webpack-plugin@^0.4.6:
     source-map "^0.5.6"
     uglify-js "^2.8.29"
     webpack-sources "^1.0.1"
-
-unicode-emoji-modifier-base@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/unicode-emoji-modifier-base/-/unicode-emoji-modifier-base-1.0.0.tgz#dbbd5b54ba30f287e2a8d5a249da6c0cef369459"
 
 union-value@^1.0.0:
   version "1.0.0"

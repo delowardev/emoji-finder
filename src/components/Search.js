@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setFilterText } from '../actions'
+import SearcIcon from '../styles/images/search.svg'
 
 class Search extends Component {
   
@@ -21,13 +22,20 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <form>
-          <input
-            type="search"
-            placeholder="Search Here"
-            value={this.state.keyword}
-            onChange={this.handleOnChange}
-          />
+        <form className="search_form">
+          <div className="input_wrap">
+            <input
+              type="search"
+              placeholder="Search Here"
+              value={this.state.keyword}
+              onChange={this.handleOnChange}
+            >
+            </input>
+            <img
+              src={SearcIcon}
+              alt=""
+            />
+          </div>
         </form>
       </div>
     )

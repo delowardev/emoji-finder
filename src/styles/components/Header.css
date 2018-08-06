@@ -4,6 +4,10 @@ header{
     padding: 15px 0;
 }
 
+.logo_img {
+    padding: 3px 0px;
+}
+
 .logo_img img {
     height: 30px;
     display: block;

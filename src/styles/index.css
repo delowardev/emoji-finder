@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +7,14 @@
 
 body{
     background: #fafaff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
 }
 
 @import url("components/Header.css");
 @import url("components/Search.css");
+@import url("components/SubHeader.css");
+@import url("components/ContentArea.css");
+@import url("components/Category.css");
+@import url("components/EmojiList.css");
+@import url("components/Emoji.css");

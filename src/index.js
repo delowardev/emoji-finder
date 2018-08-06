@@ -4,6 +4,7 @@ import App from './components/App'
 import {Provider} from 'react-redux'
 import store from './store'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
+import './styles/index.css'
 
 const template = (
     <Provider store={store}>
@@ -11,8 +12,9 @@ const template = (
     </Provider>
 )
 
+console.log(store.getState())
 store.subscribe(() => {
-    console.log(store.getState().filterEmoji)
+    console.log(store.getState())
 })
 
 ReactDOM.render(template, document.getElementById('root'))
