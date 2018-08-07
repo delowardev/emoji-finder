@@ -2,7 +2,7 @@ import { FILTER_BY_TEXT, FILTER_BY_CATEGORY } from '../actions'
 
 const defaultFilterState = {
     text: '',
-    category: ''
+    category: []
 }
 
 export default (state = defaultFilterState, action) => {

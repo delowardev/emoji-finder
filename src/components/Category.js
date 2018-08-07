@@ -5,7 +5,8 @@ import { addCategory, filterByCategory } from '../actions'
 class Category extends Component {
     state = {
         categories: [],
-        category_filter: ''
+        category_filter: [],
+        all_emoji: Object.entries(this.props.emoji)
     }
 
     componentWillMount = () => {
@@ -29,7 +30,22 @@ class Category extends Component {
     }
 
     handleOnClick = (e) => {
-        e.target.value === this.state.category_filter ? this.props.filterByCategory('') : this.props.filterByCategory(e.target.value)
+        if (this.state.category_filter.length > 0 && this.state.category_filter.includes(e.target.value)) {
+            this.props.filterByCategory(this.state.category_filter.filter(item => item !== e.target.value))
+        } else {
+            this.state.category_filter.push(e.target.value)
+            this.props.filterByCategory(this.state.category_filter)
+        }
+    }
+
+    handleOnAllClick = (e) => {
+        if (this.state.category_filter.length < this.state.categories.length) {
+            this.props.filterByCategory(this.state.categories)
+            e.target.className = 'active'
+        } else {
+            this.props.filterByCategory([])
+            e.target.className = ''
+        }
     }
 
     render() {
@@ -37,6 +53,13 @@ class Category extends Component {
             <div className="category_list">
                 <h5>Category</h5>
                 <ul>
+                    <li>
+                        <button
+                            onClick={this.handleOnAllClick}
+                        >
+                            All Emoji <span>{this.state.all_emoji.length}</span>
+                        </button>
+                    </li>
                     {
                         this.state.categories.map(category => (
                             <li
@@ -45,11 +68,9 @@ class Category extends Component {
                                 <button
                                     onClick={this.handleOnClick}
                                     value={category}
-                                    className={
-                                        category === this.state.category_filter ? 'active' : ''
-                                    }
+                                    className={this.state.category_filter.includes(category) ? 'active' : ''}
                                 >
-                                    {category} <span>230</span>
+                                    {category} <span>{this.state.all_emoji.filter(emoji => emoji[1].category === category).length}</span>
                                 </button>
                             </li>
                         ))

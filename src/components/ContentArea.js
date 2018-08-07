@@ -1,8 +1,9 @@
 import React from 'react'
-import EmojiList from './EmojiList'
+import SearchResult from './SearchResult'
 import Category from './Category'
+import EmojiBlock from './EmojiBlock'
 
-export default () => {
+const ContentArea = () => {
     return (
         <div className="content_area">
             <div className="container">
@@ -11,10 +12,13 @@ export default () => {
                         <Category />
                     </div>
                     <div className="col-9">
-                        <EmojiList />
+                        <EmojiBlock />
+                        <SearchResult />
                     </div>
                 </div>
             </div>
         </div>
     )
 }
+
+export default ContentArea

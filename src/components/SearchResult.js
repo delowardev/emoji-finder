@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Emoji from './Emoji'
 import getVisibleEmoji from '../selectors'
 
-class EmojiList extends Component {
+class SearchResult extends Component {
     state = {
         allEmoji: getVisibleEmoji(Object.entries(this.props.allEmoji), {text: '', category: ''}),
         visibleEmoji: []
@@ -13,13 +13,17 @@ class EmojiList extends Component {
             visibleEmoji: getVisibleEmoji(this.state.allEmoji, {text: nextProps.filterText, category: nextProps.filterCategory})
         })
     }
-    componentWillMount = () => {
-        this.setState({
-            visibleEmoji: getVisibleEmoji(this.state.allEmoji, {text: '', category: ''})
-        })
-    }
+
+    // componentWillMount = () => {
+    //     this.setState({
+    //         visibleEmoji: getVisibleEmoji(this.state.allEmoji, {text: '', category: ''})
+    //     })
+    // }
+
     render() {
+        
         return (
+            (this.state.visibleEmoji.length > 0 && this.props.filterText ) && 
             <div className="emoji_list">
                 <h5>Search Result</h5>
                 {
@@ -40,4 +44,4 @@ const mapStateToProps = state => ({
     filterText: state.filterEmoji.text,
     filterCategory: state.filterEmoji.category
 })
-export default connect(mapStateToProps) (EmojiList)
+export default connect(mapStateToProps) (SearchResult)
