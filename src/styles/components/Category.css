@@ -1,19 +1,14 @@
 .category_list h5{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    padding: 12px 16px;
-    margin: -16px -16px 15px;
-    background: #282828;
-    color: #ffffff;
+    margin: 0 0 10px;
+    color: #282828;
 }
 
 .category_list{
-    padding: 16px;
-    border-radius: 6px;
     overflow: hidden;
     position: relative;
     z-index: 1;
-    border: 1px solid rgb(238, 238, 238);
 }
 
 .category_list::after{

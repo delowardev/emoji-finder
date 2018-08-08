@@ -1,4 +1,4 @@
-import emoji from '../emoji/emoji.json'
+import emoji from '../emoji/emoji.min.json'
 
 export default (state = emoji, action) => {
     switch (action.type) {

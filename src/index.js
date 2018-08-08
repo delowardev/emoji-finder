@@ -12,9 +12,4 @@ const template = (
     </Provider>
 )
 
-console.log(store.getState())
-store.subscribe(() => {
-    console.log(store.getState())
-})
-
 ReactDOM.render(template, document.getElementById('root'))

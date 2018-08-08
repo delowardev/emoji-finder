@@ -1,12 +1,12 @@
-.emoji_list span{
+.emoji_block span{
     display: inline-block;
 }
 
-.emoji_list span{
-    font-size: 35px;
-    line-height: 47px;
-    height: 48px;
-    min-width: 48px;
+.emoji_block span{
+    font-size: 25px;
+    line-height: 37px;
+    height: 38px;
+    min-width: 38px;
     text-align: center;
     vertical-align: top;
     border-radius: 4px;
@@ -14,6 +14,6 @@
     border: 1px solid transparent;
 }
 
-.emoji_list span:hover{
+.emoji_block span:hover{
     background: #DCDCDC;
 }

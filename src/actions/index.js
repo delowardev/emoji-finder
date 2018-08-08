@@ -2,6 +2,7 @@
 export const FILTER_BY_TEXT = 'FILTER_BY_TEXT'
 export const FILTER_BY_CATEGORY = 'FILTER_BY_CATEGORY'
 export const ADD_CATEGORY = 'ADD_CATEGORY'
+export const ADD_TO_CLIPBOARD = 'ADD_TO_CLIPBOARD'
 
 export const setFilterText = text => ({
     type: FILTER_BY_TEXT,
@@ -16,4 +17,9 @@ export const filterByCategory = category => ({
 export const addCategory = categories => ({
     type: ADD_CATEGORY,
     categories
+})
+
+export const addToClipboard = clipboard => ({
+    type: ADD_TO_CLIPBOARD,
+    clipboard
 })

@@ -5,12 +5,12 @@ import getVisibleEmoji from '../selectors'
 
 class SearchResult extends Component {
     state = {
-        allEmoji: getVisibleEmoji(Object.entries(this.props.allEmoji), {text: '', category: ''}),
+        allEmoji: getVisibleEmoji(Object.entries(this.props.allEmoji), {text: ''}),
         visibleEmoji: []
     }
     componentWillReceiveProps = (nextProps) => {
         this.setState({
-            visibleEmoji: getVisibleEmoji(this.state.allEmoji, {text: nextProps.filterText, category: nextProps.filterCategory})
+            visibleEmoji: getVisibleEmoji(this.state.allEmoji, {text: nextProps.filterText})
         })
     }
 
@@ -25,7 +25,7 @@ class SearchResult extends Component {
         return (
             (this.state.visibleEmoji.length > 0 && this.props.filterText ) && 
             <div className="emoji_list">
-                <h5>Search Result</h5>
+                <h3>Search Result</h3>
                 {
                     this.state.visibleEmoji.map(emoji => (
                         <Emoji
@@ -41,7 +41,6 @@ class SearchResult extends Component {
 
 const mapStateToProps = state => ({
     allEmoji: state.emojiReducer,
-    filterText: state.filterEmoji.text,
-    filterCategory: state.filterEmoji.category
+    filterText: state.filterEmoji.text
 })
 export default connect(mapStateToProps) (SearchResult)

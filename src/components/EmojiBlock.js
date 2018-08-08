@@ -18,8 +18,8 @@ class EmojiBlock extends Component {
     render() {
         return (
             this.state.categories.map(category => (
-                <div key={category} className="emoji_list">
-                    <h5>{category}</h5>
+                <div key={category} className="emoji_block">
+                    <h3>{category}</h3>
                     {
                         this.state.emoji.filter(i => i[1].category === category).map(emoji => (
                             <Emoji
