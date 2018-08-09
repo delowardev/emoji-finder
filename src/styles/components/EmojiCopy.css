@@ -1,0 +1,40 @@
+.emoji_copy textarea{
+    width: 100%;
+    min-height: 50px;
+    border-radius: 5px;
+    resize: none;
+    border: 1px solid #dddddd;
+    padding: 10px;
+    transition: 300ms;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.emoji_copy textarea:focus,
+.emoji_copy textarea:focus,
+.emoji_copy textarea:active{
+    outline: none;
+    border-color: #523ee8;
+}
+
+.emoji_copy button{
+    padding: 5px 10px;
+    border: 1px solid #f3f3f3;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-image: linear-gradient(180deg,#523ee8,#6d47d9);
+    color: #ffffff;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.emoji_copy button.close_btn{
+    background: #ff0000;
+    background-image: linear-gradient(180deg,#D40D12,#94090D);
+}
+
+.emoji_copy button:focus,
+.emoji_copy button:focus,
+.emoji_copy button:active{
+    outline: none;
+}

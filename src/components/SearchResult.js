@@ -14,17 +14,11 @@ class SearchResult extends Component {
         })
     }
 
-    // componentWillMount = () => {
-    //     this.setState({
-    //         visibleEmoji: getVisibleEmoji(this.state.allEmoji, {text: '', category: ''})
-    //     })
-    // }
-
     render() {
         
         return (
             (this.state.visibleEmoji.length > 0 && this.props.filterText ) && 
-            <div className="emoji_list">
+            <div className="emoji_list emoji_block">
                 <h3>Search Result</h3>
                 {
                     this.state.visibleEmoji.map(emoji => (

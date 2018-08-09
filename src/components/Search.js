@@ -21,23 +21,23 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
-        <form className="search_form">
-          <div className="input_wrap">
-            <input
-              type="search"
-              placeholder="Search Here"
-              value={this.state.keyword}
-              onChange={this.handleOnChange}
-            >
-            </input>
-            <img
-              src={SearcIcon}
-              alt=""
-            />
-          </div>
-        </form>
-      </div>
+        <div>
+            <form className="search_form">
+                <div className="input_wrap">
+                    <input
+                        type="search"
+                        placeholder="Search Here"
+                        value={this.state.keyword}
+                        onChange={this.handleOnChange}
+                    >
+                    </input>
+                    <img
+                        src={SearcIcon}
+                        alt=""
+                    />
+                </div>
+            </form>
+        </div>
     )
   }
 }

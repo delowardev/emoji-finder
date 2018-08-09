@@ -1,0 +1,7 @@
+.font_size .input_range .input-range__label--min,
+.font_size .input_range .input-range__label--max{
+    display: none;
+}
+.font_size .input_range{
+    padding-top: 20px;
+}

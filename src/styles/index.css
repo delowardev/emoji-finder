@@ -15,6 +15,9 @@ body{
 @import url("components/Search.css");
 @import url("components/SubHeader.css");
 @import url("components/ContentArea.css");
+@import url("components/Common.css");
+@import url("components/EmojiCopy.css");
 @import url("components/Category.css");
 @import url("components/SearchResult.css");
 @import url("components/Emoji.css");
+@import url("components/FontSize.css");

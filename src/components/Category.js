@@ -52,8 +52,8 @@ class Category extends Component {
 
     render() {
         return (
-            <div className="category_list">
-                <h5>Category</h5>
+            <div className="category_list sidebar_item">
+                <h3>Category</h3>
                 <ul>
                     <li>
                         <button

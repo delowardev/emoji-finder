@@ -5,6 +5,6 @@ export default (state = '', action) => {
         case ADD_TO_CLIPBOARD:
             return action.clipboard
         default:
-            return state;
+            return state
     }
 }

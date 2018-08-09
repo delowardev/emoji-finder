@@ -1,28 +1,3 @@
-.category_list h5{
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0 0 10px;
-    color: #282828;
-}
-
-.category_list{
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-}
-
-.category_list::after{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/shape.png);
-    background-size: 200px;
-    left: 0;
-    top: 0;
-    opacity: .05;
-    z-index: -1;
-}
 .category_list ul{
     list-style: none;
     margin: 0;

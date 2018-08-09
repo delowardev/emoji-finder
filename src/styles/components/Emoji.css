@@ -4,14 +4,15 @@
 
 .emoji_block span{
     font-size: 25px;
-    line-height: 37px;
+    line-height: 38px;
     height: 38px;
     min-width: 38px;
     text-align: center;
-    vertical-align: top;
+    vertical-align: middle;
     border-radius: 4px;
-    padding: 4px;
+    padding: 0 4px;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .emoji_block span:hover{

@@ -1,28 +1,45 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addToClipboard } from '../actions'
+import Copy from 'copy-to-clipboard'
 
-class CopyEmojii extends Component {
+class CopyEmoji extends Component {
     state = {
-        clipboard: this.props.clipboard
+        clipboard: '',
+        copied: false
     }
     handleOnChange = e => {
         this.props.addToClipboard(e.target.value)
     }
     componentWillReceiveProps = nextProps => {
         this.setState({
-            clipboard: nextProps.clipboard
+            clipboard: nextProps.clipboard,
+            copied: false
         })
     }
     render() {
         return (
-            <div className="emoji_copy">
+            this.state.clipboard && 
+            <div className="emoji_copy sidebar_item">
                 <h3>Copy & Paste Emoji</h3>
                 <textarea
-                    value={this.state.clipboard_emoji}
+                    value={this.state.clipboard}
                     onChange={this.handleOnChange}
                 />
-                <button>Copy</button>
+                <button
+                    onClick={() => {
+                        Copy(this.state.clipboard)
+                        this.setState({
+                            copied: true
+                        })
+                    }}
+                >
+                    {this.state.copied ? 'copied' : 'copy'}
+                </button>
+                <button
+                    onClick={() =>  this.props.addToClipboard('')}
+                    className="close_btn"
+                >close</button>
             </div>
         )
     }
@@ -32,4 +49,4 @@ const mapStateToProps = state => ({
     clipboard: state.clipboard
 })
 
-export default connect (mapStateToProps, {addToClipboard}) (CopyEmojii)
+export default connect (mapStateToProps, {addToClipboard}) (CopyEmoji)
