@@ -9,7 +9,7 @@ class Emoji extends Component {
         category: this.props.emojiData[1].category,
         code: this.props.emojiData[1].code_points.base,
         clipboard: this.props.clipboard,
-        fontSize: this.props.filter.fontSize
+        font_size: this.props.filter.font_size
     }
     handleOnClick = () => {
         this.props.addToClipboard(this.state.clipboard + this.state.char)
@@ -17,7 +17,7 @@ class Emoji extends Component {
     componentWillReceiveProps = nextProps => {
         this.setState({
             clipboard: nextProps.clipboard,
-            fontSize: nextProps.filter.fontSize
+            font_size: nextProps.filter.font_size
         })
     }
     render() {
@@ -27,10 +27,10 @@ class Emoji extends Component {
                 onClick={this.handleOnClick}
                 emoji_char={this.state.char}
                 style={{
-                    fontSize: this.state.fontSize + 'px',
-                    height: this.state.fontSize + 15 + 'px',
-                    width: this.state.fontSize + 15 + 'px',
-                    lineHeight: this.state.fontSize + 15 + 'px'
+                    fontSize: this.state.font_size + 'px',
+                    height: this.state.font_size + 15 + 'px',
+                    minWidth: this.state.font_size + 15 + 'px',
+                    lineHeight: this.state.font_size + 15 + 'px'
                 }}
             >
                 {this.state.char}

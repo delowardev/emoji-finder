@@ -5,3 +5,42 @@
 .font_size .input_range{
     padding-top: 20px;
 }
+
+.color_filter{
+    font-size: 28px;
+}
+.color_filter span{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    background: #f8d049;
+    border: 4px solid #fff;
+    outline: 1px solid #f8d049;
+}
+.color_filter span:not(:last-child){
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.color_filter span.skin_tone_light{
+    background: #fadcbc;
+    outline-color: #fadcbc;
+}
+.color_filter span.skin_tone_medium_light{
+    background: #e0bb95;
+    outline-color: #e0bb95;
+}
+.color_filter span.skin_tone_medium{
+    background: #bf8f68;
+    outline-color: #bf8f68;
+}
+.color_filter span.skin_tone_medium_dark{
+    background: #9b643d;
+    outline-color: #9b643d;
+}
+.color_filter span.skin_tone_dark{
+    background: #594539;
+    outline-color: #594539;
+}

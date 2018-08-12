@@ -25,7 +25,7 @@ export const addToClipboard = clipboard => ({
     clipboard
 })
 
-export const changeFontSize = fontSize => ({
+export const changeFontSize = font_size => ({
     type: CHANGE_FONT_SIZE,
-    fontSize
+    font_size
 })

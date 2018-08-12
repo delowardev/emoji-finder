@@ -1,3 +1,13 @@
+.emoji_block{
+    margin-bottom: 35px;
+}
+.emoji_block h3{
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.emoji_block_inner {
+    overflow: hidden;
+}
 .emoji_block span{
     display: inline-block;
 }
@@ -13,6 +23,7 @@
     padding: 0 4px;
     border: 1px solid transparent;
     cursor: pointer;
+    float: left;
 }
 
 .emoji_block span:hover{

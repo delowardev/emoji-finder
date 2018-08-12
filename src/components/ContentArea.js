@@ -4,6 +4,7 @@ import Category from './Category'
 import EmojiBlock from './EmojiBlock'
 import CopyEmoji from './CopyEmojii'
 import FontSize from './FontSize'
+import Search from './Search'
 
 const ContentArea = () => {
     return (
@@ -11,11 +12,14 @@ const ContentArea = () => {
             <div className="container-fluid">
                 <div className="row justify-content-center">
                     <div className="col-2">
-                        <FontSize />
-                        <CopyEmoji />
-                        <Category />
+                        <div className="sidebar">
+                            <CopyEmoji />
+                            <FontSize />
+                            <Category />
+                        </div>
                     </div>
                     <div className="col-9">
+                        <Search />
                         <SearchResult />
                         <EmojiBlock />
                     </div>

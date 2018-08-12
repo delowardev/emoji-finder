@@ -1,6 +1,5 @@
 import React from 'react'
-import Search from './Search'
-import logo from '../styles/images/logo-white.svg'
+import logo from '../styles/images/logo-white.png'
 const Header = () => {
     return (
         <header>
@@ -12,7 +11,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="col-9">
-                        <Search />
+                        
                     </div> 
                 </div>
             </div>

@@ -21,7 +21,6 @@ class CopyEmoji extends Component {
         return (
             this.state.clipboard && 
             <div className="emoji_copy sidebar_item">
-                <h3>Copy & Paste Emoji</h3>
                 <textarea
                     value={this.state.clipboard}
                     onChange={this.handleOnChange}

@@ -1,28 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addCategory, filterByCategory } from '../actions'
-import _ from 'lodash'
 
 class Category extends Component {
     state = {
         categories: this.props.categories,
-        category_filter: this.props.category_filter.category,
-        all_emoji: Object.entries(this.props.emoji)
+        category_filter: this.props.category_filter.category
     }
 
+
     componentWillMount = () => {
-        let categories = []
-        this.state.all_emoji.map(emoji => {
-            let category = emoji[1].category
-            if (!categories.includes(category)) {
-                categories.push(category)
-            }
-            return false
-        })
-
-        this.props.addCategory(categories)
-        this.props.filterByCategory(categories)
-
+        this.props.filterByCategory(Object.keys(this.state.categories))
     }
 
     componentWillReceiveProps = (nextProps) => {
@@ -43,8 +31,8 @@ class Category extends Component {
     }
 
     handleOnAllClick = (e) => {
-        if (this.state.category_filter.length < this.state.categories.length) {
-            this.props.filterByCategory(this.state.categories)
+        if (this.state.category_filter.length < Object.keys(this.state.categories).length) {
+            this.props.filterByCategory(Object.keys(this.state.categories))
         } else {
             this.props.filterByCategory([])
         }
@@ -59,23 +47,26 @@ class Category extends Component {
                         <button
                             onClick={this.handleOnAllClick}
                             className={
-                                _.isEqual(this.state.categories, this.state.category_filter) ? 'active' : ''
+                                Object.keys(this.state.categories).length === this.state.category_filter.length ? 'active' : ''
                             }
                         >
-                            All Emoji <span>{this.state.all_emoji.length}</span>
+                            All Emoji
+                            <span>
+                                {Object.entries(this.state.categories).reduce((sum, subarr) => sum + subarr[1].length ,0)}
+                            </span>
                         </button>
                     </li>
                     {
-                        this.state.categories.map(category => (
+                        Object.entries(this.state.categories).map(category => (
                             <li
-                                key={category}
+                                key={category[0]}
                             >
                                 <button
                                     onClick={this.handleOnClick}
-                                    value={category}
-                                    className={this.state.category_filter.includes(category) ? 'active' : ''}
+                                    value={category[0]}
+                                    className={this.state.category_filter.includes(category[0]) ? 'active' : ''}
                                 >
-                                    {category} <span>{this.state.all_emoji.filter(emoji => emoji[1].category === category).length}</span>
+                                    {category[0]} <span>{category[1].length}</span>
                                 </button>
                             </li>
                         ))
@@ -88,7 +79,6 @@ class Category extends Component {
 
 const mapStateToProps = state => ({
     categories: state.categories,
-    emoji: state.emojiReducer,
     category_filter: state.filterEmoji
 })
 

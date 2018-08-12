@@ -20,14 +20,16 @@ class SearchResult extends Component {
             (this.state.visibleEmoji.length > 0 && this.props.filterText ) && 
             <div className="emoji_list emoji_block">
                 <h3>Search Result</h3>
-                {
-                    this.state.visibleEmoji.map(emoji => (
-                        <Emoji
-                            key={emoji[0]}
-                            emojiData={emoji}
-                        />
-                    ))
-                }
+                <div className="emoji_block_inner">
+                    {
+                        this.state.visibleEmoji.map(emoji => (
+                            <Emoji
+                                key={emoji[0]}
+                                emojiData={emoji}
+                            />
+                        ))
+                    }
+                </div>
             </div>
         )
     }

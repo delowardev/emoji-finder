@@ -31,10 +31,6 @@ class Search extends Component {
                         onChange={this.handleOnChange}
                     >
                     </input>
-                    <img
-                        src={SearcIcon}
-                        alt=""
-                    />
                 </div>
             </form>
         </div>

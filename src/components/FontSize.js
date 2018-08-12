@@ -6,8 +6,8 @@ import 'react-input-range/lib/css/index.css'
 
 class FontSize extends Component {
     state = {
-        value: this.props.filter.fontSize,
-        valueChanged: this.props.filter.fontSize
+        value: this.props.filter.font_size,
+        valueChanged: this.props.filter.font_size
     }
 
     handleOnChange = e => {
@@ -16,34 +16,41 @@ class FontSize extends Component {
 
     componentWillReceiveProps = nextProps => {
         this.setState({
-            valueChanged: nextProps.filter.fontSize
+            valueChanged: nextProps.filter.font_size
         })
     }
 
     render() {
         return (
-            <form className="form font_size sidebar_item">
-                <h3>Emoji Size & Color</h3>
-                <div className="input_range">
-                    <InputRange
-                        maxValue={50}
-                        minValue={0}
-                        value={this.state.value}
-                        onChange={
-                            value => this.setState({ value })
-                        }
-                        onChangeComplete={this.handleOnChange}
-                    />
-                </div>
-                <div className="color_filter"> 
-                    <span className="skin_tone_none">👦</span>
-                    <span className="skin_tone_light">👦🏻</span>
-                    <span className="skin_tone_medium_light">👦🏼</span>
-                    <span className="skin_tone_medium">👦🏽</span>
-                    <span className="skin_tone_medium_dark">👦🏾</span>
-                    <span className="skin_tone_dark">👦🏿</span>
-                </div>
-            </form>
+            <div>
+                {
+                    // <div className="sidebar_item">
+                    //     <div className="color_filter">
+                    //         <span className="skin_tone_none"></span>
+                    //         <span className="skin_tone_light"></span>
+                    //         <span className="skin_tone_medium_light"></span>
+                    //         <span className="skin_tone_medium"></span>
+                    //         <span className="skin_tone_medium_dark"></span>
+                    //         <span className="skin_tone_dark"></span>
+                    //     </div>
+                    // </div>
+                }
+                <form className="form font_size sidebar_item">
+                    <h3>Emoji Size</h3>
+                    <div className="input_range">
+                        <InputRange
+                            maxValue={50}
+                            minValue={0}
+                            value={this.state.value}
+                            onChange={
+                                value => this.setState({ value })
+                            }
+                            onChangeComplete={this.handleOnChange}
+                        />
+                    </div>
+                </form>
+                <div></div>
+            </div>
         )
     }
 }

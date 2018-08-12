@@ -3,7 +3,7 @@ import { FILTER_BY_TEXT, FILTER_BY_CATEGORY, CHANGE_FONT_SIZE } from '../actions
 const defaultFilterState = {
     text: '',
     category: [],
-    fontSize: 25,
+    font_size: 25,
     skinTone: 'light'
 }
 
@@ -17,7 +17,7 @@ export default (state = defaultFilterState, action) => {
         case CHANGE_FONT_SIZE:
             return {
                 ...state,
-                fontSize: action.fontSize
+                font_size: action.font_size
             }
         case FILTER_BY_CATEGORY:
             return {
