@@ -5,6 +5,7 @@ import EmojiBlock from './EmojiBlock'
 import CopyEmoji from './CopyEmojii'
 import FontSize from './FontSize'
 import Search from './Search'
+import Sticky from 'react-stickynode'
 
 const ContentArea = () => {
     return (
@@ -12,11 +13,13 @@ const ContentArea = () => {
             <div className="container-fluid">
                 <div className="row justify-content-center">
                     <div className="col-2">
-                        <div className="sidebar">
-                            <CopyEmoji />
-                            <FontSize />
-                            <Category />
-                        </div>
+                        <Sticky top={30}>
+                            <div className="sidebar">
+                                <CopyEmoji />
+                                <FontSize />
+                                <Category />
+                            </div>
+                        </Sticky>
                     </div>
                     <div className="col-9">
                         <Search />
