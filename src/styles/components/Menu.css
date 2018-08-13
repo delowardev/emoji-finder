@@ -1,0 +1,14 @@
+.header_menu{
+    text-align: right;
+}
+
+.header_menu a{
+    color: #fff;
+    padding: 8px;
+    list-style: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-weight: 300;   
+    display: inline-block;;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import Menu from './Menu'
 import logo from '../styles/images/logo-white.png'
 const Header = () => {
     return (
@@ -11,7 +12,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="col-9">
-                        
+                        <Menu />
                     </div> 
                 </div>
             </div>
