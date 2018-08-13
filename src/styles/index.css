@@ -12,6 +12,7 @@ body{
 }
 
 @import url("components/Header.css");
+@import url("components/Menu.css");
 @import url("components/Search.css");
 @import url("components/SubHeader.css");
 @import url("components/ContentArea.css");

@@ -1,5 +1,5 @@
 import { ADD_CATEGORY } from '../actions'
-import emoji from '../emoji/emoji.min.json'
+import emoji from '../emoji/emoji.json'
 import {getEmojiByCategory} from '../selectors'
 
 const emojies = Object.entries(emoji) 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setFilterText } from '../actions'
-import SearcIcon from '../styles/images/search.svg'
 
 class Search extends Component {
   
