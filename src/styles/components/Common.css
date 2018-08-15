@@ -9,3 +9,13 @@
 .sidebar_item:not(:last-child){
     margin-bottom: 30px;
 }
+
+.search_block{
+    background: #fafaff;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(40, 40, 40, 0.05);
+}
+
+.search_block .emoji_block{
+    padding: 0 15px;
+}

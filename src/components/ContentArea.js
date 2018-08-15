@@ -22,8 +22,12 @@ const ContentArea = () => {
                         </Sticky>
                     </div>
                     <div className="col-9">
-                        <Search />
-                        <SearchResult />
+                        <Sticky top={30}>
+                            <div className="search_block">
+                                <Search />
+                                <SearchResult />
+                            </div>
+                        </Sticky>
                         <EmojiBlock />
                     </div>
                 </div>
