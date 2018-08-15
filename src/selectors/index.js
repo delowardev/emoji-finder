@@ -10,7 +10,7 @@ export const getEmojiByCategory = (emojies, category) => (
 
 const getVisibleEmoji = (emoji, { text = '' }) => (
     emoji.filter(single_emoji => {
-        let keywords = single_emoji[1].name
+        let keywords = single_emoji[1].name + ' ' + single_emoji[1].keywords.join('') + ' ' + single_emoji[1].category
         return text ? keywords.toLowerCase().includes(text.toLowerCase()) : true
     })
 )
