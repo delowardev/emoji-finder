@@ -39,11 +39,7 @@
 
 .category_list ul li button.active,
 .category_list ul li button:hover{
-    background-image: linear-gradient(90deg,#523ee8,#6d47d9);
-    background-clip: text;
-    text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #523ee8;
 }
 
 .category_list ul li button span{
