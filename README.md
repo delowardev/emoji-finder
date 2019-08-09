@@ -1,4 +1,4 @@
-#### `Live Demo` [`https://delowar64.github.io/emoji-finder/`](https://delowar64.github.io/emoji-finder/) 
+#### `Live Demo` [`https://delowardev.github.io/emoji-finder/`](https://delowardev.github.io/emoji-finder/) 
 
 ## Available Scripts
 
